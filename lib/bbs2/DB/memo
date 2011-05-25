@@ -1,0 +1,2 @@
+inflate qr/^created_at$/ => sub { Time::Piece->from_mysql_datetime(shift) };
+deflate qr/^created_at$/ => sub { shift->mysql_datetime };
